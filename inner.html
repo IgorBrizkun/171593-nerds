@@ -6,81 +6,201 @@
   <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<!-- Делаю хэдер(часть страницы с серым фономб класс для того, чтобы отличить этот хэдер от возможных других) -->
-<header class="shop-header">
-  <!--тут делаю, как нас учили - всё загоняем в контейнер, чтобы центрировать-->
-  <div>
-    <!-- Вставляю логотип, который потом, видимо, появится в формате картинки-->
-    <div class="logo-1">
-      <a href="#"><img src="img/logo-1.png"></a>
-    </div>
-    <!--Вставляю меню(навигацию)-->
-    <nav class="main-navigation" >
-      <ul>
-        <li>
-          <a href="#">Студия</a>
-        </li>
-        <li>
-          <a href="#">Клиенты</a>
-        </li>
-        <li>
-          <a href="#">Магазин</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-    <!--Вставляю корзину-->
-    <div class="cart">
-      <label><a href="#"><img src="img/cart-1.png" alt="Корзина Nerds">Корзина</a></label>
-    </div>
+  <header>
+    <div class="container-3">
+      <!-- Логотип-->
+      <div class="logo-1">
+        <a href="index.html"><img src="img/logo-1.png" alt="Логотип Nerds"></a>
+      </div>
+      <!--Навигация-->
+      <nav>
+        <ul class="main-navigation">
+          <li><a class="main-navigation-item" href="#">СТУДИЯ</a>
+          <li><a class="main-navigation-item" href="#">КЛИЕНТЫ</a>
+          <li><a class="main-navigation-item" href="inner.html">МАГАЗИН</a>
+          <li><a class="main-navigation-item" href="#">КОНТАКТЫ</a>
+        </ul>
+      </nav>
+      <!--Корзина-->
+      <a class="cart" href="#">КОРЗИНА</a>
+      <!--Пытаюсь оформить "слайдер"-->
     <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
   </div>
 </header>
 <!--Перехожу ко второй части сайта, которая с белым фоном. класс, потому что он также располагается, как и хэдер-->
-<main class="container">
-<h2>Стоимость:</h2>
-<!--Радиобаттон!-->
-  <h2 class="slider-title">СЕТКА:</h2><label><input type="radio" name="choose-web-design" value="Адаптивная" checked>Адаптивная</label>
-  <label><input type="radio" name="choose-web-design" value="Фиксированная">Фиксированная</label>
-  <label><input type="radio" name="choose-web-design" value="Резиновая">Резиновая</label>
-<!--мультиселектор-->
-  <h2 class="slider-title">ОСОБЕННОСТИ:</h2>
-  <select name="features" multiple size="5">
-  <option selected>Слайдер</option>
-  <option>Блок преимуществ</option>
-   <option>Новости</option>
-  <option selected>Галерея</option>
- <option>корзина</option>
-  </select>
-  <div class="layouts">
-    <img src="img/layout-aviator.png">
-    <img src="img/layout-sunset.png">
-    <img src="img/layout-forte.png">
-    <img src="img/layout-marquee.png">
-    <img src="img/layout-avenue.png">
-    <img src="img/layout-dovetail.png">
-  </div>
-  <div class="map">
-    <img src="img/map.png" alt="Nerds: схема проезда">
-    <img class="pointer" src="img/pointer.png" alt="Nerds: указатель">
-    <div class="contacts">
-      <b>NЁRDS DESIGN STUDIO</b>
-      <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      <p>тел. +7 (812) 275-75-75</p>
+<main class="container-4">
+  <form class="choose-layout-form" action="form.php" method="GET">
+    <h3>Стоимость:</h3>
+    <div class="range-filter">
+      <div class="range-controls">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="toggle toggle-min"></div>
+        <div class="toggle toggle-max"></div>
+      </div>
+      <div class="price-controls">
+        <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+        <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+      </div>
     </div>
-    <!--Я пока не знаю, как работает "напишите нам", может, почта открывается, а, может, специальная форма-->
-    <a class="contact-us-button" href="#">НАПИШИТЕ НАМ</a>
+    <!--Radio-button on inner page - grid selection-->
+    <fieldset class="grid-radio">
+      <legend>СЕТКА:</legend>
+      <div class="grid-radio-item">
+        <input type="radio" name="choose-web-design" value="Адаптивная" id="adaptive" checked><label for="adaptive">Адаптивная</label><br>
+      </div>
+      <div class="grid-radio-item">
+        <input type="radio" name="choose-web-design" value="Фиксированная" id="fixed"><label for="fixed">Фиксированная</label><br>
+      </div>
+      <div class="grid-radio-item">
+        <input type="radio" name="choose-web-design" value="Резиновая" id="rubbed"><label for="rubbed">Резиновая</label>
+      </div>
+    </fieldset>
+    <!--check-box on inner page-->
+    <fieldset class="features-filter">
+      <legend>Особенности:</legend>
+      <div class="features-filter-item">
+        <input type="checkbox" name="slider" id="slider" checked><label for="slider">Слайдер</label>
+      </div>
+      <div class="features-filter-item">
+        <input type="checkbox" name="advantage" id="advantage"><label for="advantage">Блок преимуществ</label>
+      </div>
+      <div class="features-filter-item">
+        <input type="checkbox" name="news" id="news" checked><label for="news">Новости</label>
+      </div>
+      <div class="features-filter-item">
+        <input type="checkbox" name="gallery" id="gallery"><label for="gallery">Галерея</label>
+      </div>
+      <div class="features-filter-item">
+        <input type="checkbox" name="busket" id="cart"><label for="cart">Корзина</label>
+      </div>
+    </fieldset>
+    <div class="sort-btn">
+      <input type="submit" value="Показать">
+    </div>
+  </form>
+<!--layouts on inner page-->
+  <div class="layouts">
+    <div class="sort-type">
+      <span class="sort-type-title">Сортировать:</span>
+      <a href="#">по цене</a>
+      <a href="#">по типу</a>
+      <a href="#">по функционалу</a>
+      <a href="#"><div class="sort-direction-up"></div><div class="sort-direction-down"></div></a>
+    </div>
+    <div class="layout-images">
+      <div class="layout-image-1">
+        <img src="img/layout-aviator.png">
+        <div class="aviator">
+          <h5>AVIATOR</h5>
+          <p>Интернет-магазин<br> с личным кабинетом</p>
+          <div class="buy-btn btn red-btn">8000 р.</div>
+        </div>
+      </div>
+      <div class="layout-image-2">
+        <img src="img/layout-sunset.png">
+        <div class="sunset">
+          <h5>SUNSET</h5>
+          <p>Интернет-магазин<br> с личным кабинетом</p>
+          <div class="buy-btn btn red-btn">8000 р.</div>
+        </div>
+      </div>
+      <div class="layout-image-3">
+        <img src="img/layout-forte.png">
+        <div class="forte">
+          <h5>FORTE</h5>
+          <p>Интернет-магазин<br> с личным кабинетом</p>
+          <div class="buy-btn btn red-btn">8000 р.</div>
+        </div>
+      </div>
+      <div class="layout-image-4">
+        <img src="img/layout-marquee.png">
+        <div class="marquee">
+          <h5>MARQUEE</h5>
+          <p>Интернет-магазин<br> с личным кабинетом</p>
+          <div class="buy-btn btn red-btn">8000 р.</div>
+        </div>
+      </div>
+      <div class="layout-image-5">
+        <img src="img/layout-avenue.png">
+        <div class="avenue">
+          <h5>AVENUE</h5>
+          <p>Интернет-магазин<br> с личным кабинетом</p>
+          <div class="buy-btn btn red-btn">8000 р.</div>
+        </div>
+      </div>
+      <div class="layout-image-6">
+        <img src="img/layout-dovetail.png">
+        <div class="dovetail">
+          <h5>DOVETEIL</h5>
+          <p>Интернет-магазин<br> с личным кабинетом</p>
+          <div class="buy-btn btn red-btn">8000 р.</div>
+        </div>
+      </div>
+    </div>
+    <div class="paginator">
+      <a class="current-page" href="#1">1</a>
+      <a href="#2">2</a>
+      <a href="#3">3</a>
+      <a href="#next">Следующая</a>
+    </div>
+    <div class="aviator">
+        <h5>AVIATOR</h5>
+        <p>Интернет-магазин<br> с личным кабинетом</p>
+        <div class="buy-btn btn red-btn">8000 р.</div>
+    </div>
   </div>
 </main>
 <!--Здесь указываю социальные сети. Логотипы - это картинки, на которые нажимаешь, чтобы перейти в сеть-->
-<footer class="container">
-  <ul class="social">
-    <li class="socialitem"><a href="http://www.vk.com"><span class="vk"></span></a></li>
-    <li class="socialitem"><a href="http://www.facebook.com"><span class="facebook"></span></a></li>
-    <li class="socialitem"><a href="http://www.instagram.com"><span class="instagram"></span></a></li>
-  </ul>
-  <h2>Давайте дружить, это выгодно!</h2>
-  <p>Скидка 10% для друзей из социальных сетей!</p>
-</footer>
+  <footer>
+    <div class="map">
+      <img class="pointer" src="img/pointer.png" alt="Nerds: указатель">
+      <div class="write-us">
+        <div class="write-us-title">nёrds design studio</div>
+        <div class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+        <div class="contact-phone">тел. +7 (812) 275-75-75</div>
+        <div class="write-us-btn red-btn">напишите нам</div>
+      </div>
+      <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+
+        <form class="write-us-form" action="#" method="post">
+          <div class="your-name"><label for=".name">Ваше имя:</label></div>
+          <input class="your-name-input" id=".name" type="text" name="login" placeholder="ПРЕДСТАВЬТЕСЬ, ПОЖАЛУЙСТА">
+          <div class="your-e-mail"><label for=".e-mail">Ваш e-mail:</label></div>
+          <input class="your-e-mail-input" id=".e-mail" type="text"  name="e-mail" placeholder="ДЛЯ ОТПРАВКИ ОТВЕТА">
+          <div class="text-message"><label for=".textarea">Текст письма:</label></div>
+          <textarea class="text-message-input" id=".textarea" type="text"  name="message" placeholder="В СВОБОДНОЙ ФОРМЕ"></textarea>
+          <button class="write-us-button red-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="container-4">
+      <!--Здесь указываю социальные сети. Логотипы - это картинки, на которые нажимаешь, чтобы перейти в сеть-->
+      <ul class="social">
+        <li class="socialitem"><a href="http://www.vk.com"><span class="vk"></span></a></li>
+        <li class="socialitem"><a href="http://www.facebook.com"><span class="facebook"></span></a></li>
+        <li class="socialitem"><a href="http://www.instagram.com"><span class="instagram"></span></a></li>
+      </ul>
+      <div class="discount">
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var link = document.querySelector(".write-us-btn");
+    var popup = document.querySelector(".modal-content");
+    var close = popup.querySelector(".modal-content-close");
+    link.addEventListener("click", function(event) {event.preventDefault();
+      popup.classList.add("modal-content-show");
+    });
+    close.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.remove("modal-content-show");
+    });
+  </script>
+</body>
+</html>

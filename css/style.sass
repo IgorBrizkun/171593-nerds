@@ -1,150 +1,323 @@
 body
+  font-family: "Roboto", sans-serif
+  font-weight: normal
   margin: 0
-/*бэкграунд/*
-.main-header-1
+h1
+  font-size: 40px
+  margin-top: -20px
+  width: 710px
+  text-align: center
+  margin-left: 85px
+  font-weight: 500
+h2
+  font-size: 36px
+  line-height: 36px
+  font-weight: 500
+h3
+  font-size: 18px
+  line-height: 30px
+  text-transform: uppercase
+  font-weight: 400
+legend
+  margin-left: -3px
+  margin-bottom: 10px
+  font-size: 18px
+  line-height: 30px
+  text-transform: uppercase
+  font-weight: 400
+/*main-header/*
+header
   background: #eeeeee
   width: auto
-  /*центрирую содержание*/
+  /*container to center the content*/
 .container-1
   width: 880px
-  min-height: 500px
-  margin: 0 auto
   padding: 0 10px
+  margin: 0 auto
+  min-height: 436px
   display: flex
-  flex-flow: row wrap
-  align-items: center
-/*Логотип*/
+  flex-wrap: wrap
+/*logo*/
 .logo-1
+  margin-right: 20px
+  width: 140px
+  height: 56px
   margin-top: 28px
-  margin-right: 180px
-/*Навигация*/
+/*navigation*/
 .main-navigation
-  margin-top: 38px
-  margin-right: 60px
-  width: 400px
-/*Оформление элементов навигации*/
-.main-navigation-item
   display: flex
-  justify-content: space-around
+  width: 520px
+  margin-right: 60px
+  margin-top: 51px
+/*navigation`s items*/
+.main-navigation li
+  line-height: 30px
+  font-size: 14px
+  padding-right: 46px
   list-style: none
-  margin-left: -60px
-  font-family: 'Roboto', sans-serif
-  font-size: 14px
-  line-height: 30px
-  font-weight: 500
-.no-underline
+  /*adding padding for contacts so that items stays in line*/
+.main-navigation li:first-child
+  padding-left: 120px
+  /*decorating navigation items*/
+.main-navigation-item
   text-decoration: none
-  font-family: 'Roboto', sans-serif
-  font-size: 14px
+  color: black
+  &:hover
+    color: #fa6064
+  &:focus
+    border-bottom: 2px solid #fb565a
+    color: black
+  &:active
+    color: #a8a8a8
+    border-bottom: none
+/*cart*/
+.cart
+  position: relative
   line-height: 30px
-  font-weight: 500
-  color: #000000
-.no-underline:hover
+  font-size: 14px
+  padding-left: 34px
+  margin-top: 51px
+  height: 30px
+  cursor: pointer
   text-decoration: none
-  font-family: 'Roboto', sans-serif
-  font-size: 14px
-  line-height: 30px
-  font-weight: 500
-  color: #f4a7a9
-.no-underline:active
-  text-decoration: none
-  font-family: 'Roboto', sans-serif
-  font-size: 14px
-  line-height: 30px
-  font-weight: 500
-  color: #c1c1c1
-/*Корзина*/
-.cart-shortcut
-  background: url("../img/cart-1.png")no-repeat
+  color: black
+  &:hover
+    color: #fa6064
+  &:focus
+    border-bottom: 2px solid #fb565a
+    color: black
+  &:active
+    color: #a8a8a8
+    border-bottom: none
+.cart::before
+  content: ""
+  position: absolute
+  top: 7px
+  left: 3px
   width: 15px
   height: 15px
-  margin-top: 38px
-  margin-right: 10px
-.cart
-  margin-top: 38px
-  text-decoration: none
-  font-family: 'Roboto', sans-serif
-  font-size: 14px
-  line-height: 30px
-  font-weight: 500
-  color: #000000
-.cart:hover
-  text-decoration: none
-  font-family: 'Roboto', sans-serif
-  font-size: 14px
-  line-height: 30px
-  font-weight: 500
-  color: #f4a7a9
-.cart:active
-  text-decoration: none
-  font-family: 'Roboto', sans-serif
-  font-size: 14px
-  line-height: 30px
-  font-weight: 500
-  color: #c1c1c1
-/*слайдер пока не сделан*/
+  background: url("../img/cart-1.png")no-repeat
+.cart:hover::before
+  background: url("../img/cart-2.png")no-repeat
+.cart:focus::before
+  background: url("../img/cart-3.png")no-repeat
+.cart:active::before
+  background: url("../img/cart-4.png")no-repeat
+/*slider*/
 .slider
   flex: 100%
-/*главный блок*/
-.main-header-2
+  width: 880px
+  min-height: 310px
+  margin-top: 28px
+  position: relative
+/*text in slider*/
+.slider p
+  margin-top: -10px
+  font-size: 16px
+  line-height: 22px
+  color: #283136
+/*pictures in slider*/
+.slide
+  min-height: 310px
+  background-repeat: no-repeat
+  background-position: 100% 8px
+/*slider`s controls*/
+.slider input[type="radio"]
+  display: none
+.slider-controls
+  position: absolute
+  bottom: 80px
+  left: 50%
+  width: 200px
+  margin-left: -100px
+  text-align: center
+.slider-controls label
+  display: inline-block
+  width: 4px
+  height: 4px
+  margin: 0 3px
+  vertical-align: top
+  background: #ffffff
+  border: 3px solid white
+  border-radius: 50%
+  cursor: pointer
+/*slider`s text*/
+.slide-text
+  width: 500px
+  padding-top: 2px
+/*sliders` button*/
+.slide .learn-more-button
+  display: block
+  width: 220px
+  margin-top: 25px
+  padding: 12px 10px
+  font-size: 12px
+  text-align: center
+  color: #ffffff
+  text-transform: uppercase
+  text-decoration: none
+  background: #fb565a
+  border-radius: 3px
+.slide:nth-child(1)
+  background-image: url("../img/slider-picture-1.png")
+.slide:nth-child(2)
+  background-image: url("../img/slider-picture-2.png")
+.slide:nth-child(3)
+  background-image: url("../img/slider-picture-3.png")
+.slide
+  display: none
+#btn-1:checked ~ .slides .slide:nth-child(1)
+  display: block
+#btn-2:checked ~ .slides .slide:nth-child(2)
+  display: block
+#btn-3:checked ~ .slides .slide:nth-child(3)
+  display: block
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"]
+  background: #c1c1c1
+/*main*/
+main
   background: #ffffff
   width: auto
-/*центрирую содержание*/
+/*container for main content*/
 .container-2
   width: 880px
   min-height: 500px
   margin: 0 auto
   padding: 0 10px
-/*услуги*/
+/*services*/
 .service
   display: flex
   justify-content: space-between
   margin-left: auto
   margin-right: auto
   margin-top: 80px
+.service p
+  font-size: 15px
+  line-height: 22px
+  margin-top: -5px
+  color: #283136
+/*button*/
+.btn
+  margin-top: 20px
+  display: block
+  width: 120px
+  font-size: 12px
+  line-height: 18px
+  padding: 12px 10px
+  text-align: center
+  text-decoration: none
+  border-radius: 3px
+  text-transform: uppercase
+  color: #eeeeee
+.red-btn
+  background-color: #fb565a
+  &:hover
+    background-color: #d6494d
+  &:active
+    background-color: #b63538
+.green-btn
+  background-color: #00ca74
+  &:hover
+    background-color: #01a25e
+  &:active
+    background-color: #009053
+.yellow-btn
+  background-color: #efc84a
+  &:hover
+    background-color: #d6ae2c
+  &:active
+    background-color: #c09b24
+/*decorate line*/
+.decorate-line-1
+  border-bottom: 2px solid #eeeeee
+  width: auto
+  margin: 80px 0
 /*краткое описание*/
 .short-description
+  margin-top: -40px
   display: flex
   flex-flow: row wrap
 .description-header
-  font-family: 'Roboto', sans-serif
-  font-size: 36px
-  margin-top: 100px
-  font-weight: 500
   order: 1
 .description-text
-  font-family: 'Roboto', sans-serif
-  font-size: 16px
   order: 3
-  margin-top: -20px
-/*Логотип-2/*
+  margin-top: -13px
+  color: #283136
+  font-size: 16px
+  line-height: 22px
+.about-us
+  color: #283136
+/*logo-2/*
 .logo-2
   order: 2
-  margin-left: 162px
-  margin-top: 100px
+  margin-top: 20px
+  margin-left: 140px
   height: 75px
 .main-date
+  position: relative
+  font-size: 16px
+  line-height: 8.56px
+  order: 5
+  padding-left: 15px
+  padding-right: 15px
+  text-align: center
+  padding-top: 20px
+  margin-top: -26px
+.decorate-line-2
+  position: relative
+  top: -48px
   order: 4
-  margin-left: 200px
-  margin-top: -20px
-/*"О нас"/*
+  border-bottom: 2px solid #cccccc
+  width: 65px
+  margin-left: 89px
+  margin-top: -40px
+.decorate-line-3
+  position: relative
+  top: -48px
+  order: 6
+  border-bottom: 2px solid #cccccc
+  width: 62px
+/*"О нас"*/
 .about-us
   display: flex
   flex-flow: row wrap
+h4
+  font-size: 16px
+  line-height: 22px
+  font-weight: 500
+.about-us ul
+  font-size: 16px
+  line-height: 22px
 .what-we-do-title
   order: 1
 .what-we-do-description
+  list-style: none
   order: 3
-  margin-left: -25px
   margin-top: -20px
+  padding-left: 0px
 .how-we-work-title
   order: 2
-  margin-left: 325px
+  margin-left: 343px
 .how-we-work-description
+  list-style: none
   order: 4
-  margin-left: 250px
+  margin-left: 215px
   margin-top: -20px
-/*Логотипы друзей/*
+  padding-left: 0px
+.what-we-do-description li
+  background: url("../img/list-style.png")no-repeat left center
+  padding-left: 30px
+.how-we-work-description li
+  background: url("../img/list-style.png")no-repeat left center
+  padding-left: 30px
+.decorate-line-4
+  border-bottom: 2px solid #eeeeee
+  width: auto
+  margin-top: 38px
+  margin-bottom: 47px
+/*Логотипы друзей*/
 .partners-logo
   display: flex
   align-items: center
@@ -156,115 +329,567 @@ body
   height: 37px
   display: block
   margin-left: -40px
-.glukhanko:hover
-  background: url("../img/glukhanko-logo-hover.png") no-repeat
-  width: 198px
-  height: 37px
-  display: block
+  &:hover
+    background: url("../img/glukhanko-logo-hover.png") no-repeat
 .html-academy
   background: url("../img/htmlacademy-logo.png") no-repeat
   width: 199px
   height: 68px
   display: block
   margin-left: 50px
-.html-academy:hover
-  background: url("../img/htmlacademy-logo-hover.png") no-repeat
-  width: 199px
-  height: 68px
-  display: block
+  &:hover
+    background: url("../img/htmlacademy-logo-hover.png") no-repeat
 .borodinski
   background: url("../img/borodinski-logo.png") no-repeat
   width: 209px
   height: 98px
   display: block
   margin-left: 70px
-.borodinski:hover
-  background: url("../img/borodinski-logo-hover.png") no-repeat
-  width: 209px
-  height: 98px
-  display: block
-/*карта/*
-.map
-  background: url("../img/map.png")no-repeat
-  width:  1199px
-  height: 416px
-  margin: 0 auto
-/*контакты/*
-.contacts
-  margin-left: 200px
-  margin-top: -160px
-.contact-us-button
-  margin-left: 200px
-  margin-top: -160px
-/*указатель на карте/*
-.pointer
-  margin-left: 830px
-  margin-top: 120px
+  &:hover
+    background: url("../img/borodinski-logo-hover.png") no-repeat
+.decorate-line-5
+  border-bottom: 2px solid #eeeeee
+  width: auto
+  margin-top: 36px
+  margin-bottom: 87px
 /*footer/*
-.footer
+footer
   background: #ffffff
   width: auto
 .container-3
+  display: flex
   width: 880px
-  min-height: 500px
   margin: 0 auto
   padding: 0 10px
+/*карта/*
+.map
+  position: relative
+  background: url("../img/map.png")no-repeat
+  width:  1199px
+  height: 416px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 61px
+/*write-us/*
+.write-us
+  position: absolute
+  left: 160px
+  top: 90px
+  width: 250px
+  height: 240px
+  background-color: white
+.write-us-title
+  font-size: 16px
+  line-height: 30px
+  text-transform: uppercase
+  padding-left: 21px
+  padding-top: 24px
+  padding-bottom: 10px
+.address
+  font-size: 16px
+  line-height: 20px
+  color: #666666
+  font-weight: 400
+  padding-left: 22px
+  padding-right: 27px
+.contact-phone
+  font-size: 16px
+  line-height: 20px
+  color: #666666
+  font-weight: 400
+  padding-left: 22px
+  padding-right: 27px
+  padding-top: 23px
+  padding-bottom: 34px
+.write-us-btn
+  display: block
+  width: 183px
+  margin-left: 20px
+  margin-top: -5px
+  font-size: 12px
+  line-height: 18px
+  padding: 10px 10px
+  text-align: center
+  border-radius: 3px
+  text-transform: uppercase
+  color: #eeeeee
+  cursor: pointer
+  text-decoration: none
+/*pointer on the map/*
+.pointer
+  margin-left: 830px
+  margin-top: 120px
+/*pop-up/*
+.modal-content
+  position: relative
+  top: -84%
+  left: 23%
+  font-size: 16px
+  line-height: 18px
+  width: 470px
+  padding-left: 83px
+  padding-right: 90px
+  padding-top: 56px
+  padding-bottom: 49px
+  background-color: white
+  color: #000000
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7)
+  display: none
+.modal-content-close
+  position: absolute
+  top: 6px
+  right: 6px
+  width: 41px
+  height: 41px
+  font-size: 0
+  border: 0
+  outline: 0
+  cursor: pointer
+  background-color: #fb565a
+  border-radius: 20px
+.modal-content-close::before,
+.modal-content-close::after
+  content: ""
+  position: absolute
+  top: 18px
+  left: 6px
+  width: 30px
+  height: 5px
+  background-color: #ffffff
+  border-radius: 1px
+.modal-content-close::before
+  transform: rotate(45deg)
+.modal-content-close::after
+  transform: rotate(-45deg)
+.write-us-form input
+  font-size: 12px
+  line-height: 18px
+  font-family: 'Roboto', 'Arial', sans-serif
+  color: #000000
+  text-transform: uppercase
+.write-us-form
+  display: flex
+  flex-wrap: wrap
+.your-name
+  order: 1
+  margin-right: 163px
+  margin-bottom: 10px
+.your-name-input
+  order: 3
+  margin-right: 19px
+  margin-bottom: 21px
+  width: 215px
+  border-radius: 3px
+  border: 2px solid #d7dcde
+  &:hover
+    border: 2px solid #a2a9ac
+  &:focus,
+  &:active
+    border: 2px solid #56bffb
+.your-e-mail
+  order: 2
+  margin-bottom: 10px
+.your-e-mail-input
+  order: 4
+  width: 215px
+  margin-bottom: 21px
+  border-radius: 3px
+  border: 2px solid #d7dcde
+  &:hover
+    border: 2px solid #a2a9ac
+  &:focus,
+  &:active
+    border: 2px solid #56bffb
+.text-message
+  order: 5
+  margin-bottom: 10px
+.text-message-input
+  order: 6
+  width: 455px
+  padding-bottom: 93px
+  margin-bottom: 49px
+  border-radius: 3px
+  border: 2px solid #d7dcde
+  &:hover
+    border: 2px solid #a2a9ac
+  &:focus,
+  &:active
+    border: 2px solid #56bffb
+.write-us-button
+  order: 7
+  width: 460px
+  font-size: 12px
+  line-height: 18px
+  font-weight: 600
+  padding-top: 14px
+  padding-bottom: 15px
+  text-align: center
+  text-transform: uppercase
+  cursor: pointer
+  color: #eeeeee
+  border: none
+  border-radius: 5px
 /*социалки/*
 .social
   display: flex
   list-style: none
-  margin-top: 70px
 .vk
   background: url("../img/vk.png") no-repeat
   width: 63px
   height: 62px
   display: block
-  padding-left: 30px
+  padding-left: 27px
   margin-left: -40px
-.vk:hover
-  background: url("../img/vk-hover.png") no-repeat
-  width:  63px
-  height: 62px
-  display: block
-.vk:active
-  background: url("../img/vk-click.png")no-repeat
-  width: 63px
-  height: 62px
-  display: block
+  &:hover
+    background: url("../img/vk-hover.png") no-repeat
+  &:active
+    background: url("../img/vk-click.png")no-repeat
 .facebook
   background: url("../img/face.png")no-repeat
   width: 63px
   height: 62px
   display: block
-  padding-left: 30px
-.facebook:hover
-  background: url("../img/face-hover.png")no-repeat
-  width: 63px
-  height: 62px
-  display: block
-.facebook:active
-  background: url("../img/face-click.png")no-repeat
-  width: 63px
-  height: 62px
-  display: block
+  padding-left: 27px
+  &:hover
+    background: url("../img/face-hover.png")no-repeat
+  &:active
+    background: url("../img/face-click.png")no-repeat
 .instagram
   background: url("../img/insta.png")no-repeat
   width: 63px
   height: 62px
   display: block
-  padding-left: 30px
-.instagram:hover
-  background: url("../img/insta-hover.png")no-repeat
-  width: 63px
-  height: 62px
-  display: block
-.instagram:active
-  background: url("../img/insta-click.png")no-repeat
-  width: 63px
-  height: 62px
-  display: block
+  &:hover
+    background: url("../img/insta-hover.png")no-repeat
+  &:active
+    background: url("../img/insta-click.png")no-repeat
 /*скидки/*
 .discount
-  float: right
-  margin-top: -100px
+  margin-left: 78px
+  margin-top: -16px
+.discount p
+  font-size: 16px
+  line-height: 22px
+  color: #283136
+  margin-top: -22px
+/*INNER PAGE/*
+.container-3
+  width: 880px
+  padding: 0 10px
+  margin: 0 auto
+  min-height: 328px
+  display: flex
+  flex-wrap: wrap
+.container-4
+  width: 880px
+  padding: 0 10px
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+.choose-layout-form
+  flex-basis: 240px
+  order: 1
+  margin-top: 56px
+.layouts
+  flex-basis: 560px
+  order: 2
+  display: flex
+  flex-wrap: wrap
+  margin-left: 80px
+  margin-top: 82px
+.layout-images
+  display: flex
+  flex-wrap: wrap
+.range-filter
+  width: 240px
+.range-controls
+  position: relative
+  height: 41px
+  padding-top: 39px
+  margin-bottom: 15px
+  padding-right: 20px
+  padding-left: 20px
+  border-radius: 5px
+  background: #f1f1f1
+.range-controls .scale
+  height: 2px
+  background: #d7dcde
+.range-controls .bar
+  width: 70%
+  height: 2px
+  background: #00ca74
+.range-controls .toggle
+  position: absolute
+  top: 30px
+  left: 0px
+  width: 4px
+  height: 4px
+  cursor: pointer
+  border: 8px solid #fff
+  border-radius: 50%
+  background: #ababab
+  box-shadow: 0 2px 1px 0 #cfcfcf
+.range-controls .toggle-min
+  left: 20px
+.range-controls .toggle-max
+  left: 145px
+.price-controls label
+  font-size: 16px
+  display: inline-block
+  width: 50%
+.price-controls
+  font-size: 0
+.max-price
+  text-align: right
+.price-controls input
+  font-family: 'Roboto', 'Arial', sans-serif
+  font-size: 16px
+  width: 60px
+  margin-left: 10px
+  padding: 8px 10px
+  text-align: center
+  color: #283136
+  border: none
+  border-radius: 5px
+  outline: none
+  background: #f1f1f1
+/*Sort radiobutton*/
+.sort-radio
+  font-size: 12px
+  line-height: 18px
+  text-transform: uppercase
+  font-weight: 400
+  list-style: none
+.grid-radio
+  margin-top: 42px
+  padding-bottom: 31px
+  border: none
+  padding-left: 0px
+  margin-top: 42px
+.grid-radio-item
+  font-size: 16px
+  line-height: 20px
+  color: #283136
+  margin-bottom: 19px
+  &:hover
+    color: #000000
+.grid-radio input[type="radio"]
+  margin-left: auto
+  margin-right: 10px
+/*check-box*/
+.features-filter
+  border: none
+  display: flex
+  flex-wrap: wrap
+  padding-left: 0px
+  margin-top: -5px
+.features-filter-item
+  font-size: 16px
+  line-height: 20px
+  color: #283136
+  &:hover
+    color: #000000
+.features-filter-item
+  margin-bottom: 19px
+.features-filter input[type="checkbox"]
+  margin-right: 10px
+/*filter-buttom*/
+.sort-btn input[type="submit"]
+  font-family: "Roboto", sans-serif
+  font-size: 12px
+  font-weight: 600
+  line-height: 18px
+  width: 155px
+  height: 38px
+  text-transform: uppercase
+  border: none
+  border-radius: 3px
+  margin-left: 2px
+  margin-top: 28px
+  cursor: pointer
+  background-color: #f1f1f1
+  &:hover
+    background-color: #e5e5e5
+  &:focus
+    background-color: #d5d5d5
+    border-top: 3px solid #b5b5b5
+/*sort type*/
+.sort-type
+  position: relative
+.sort-type-title
+  font-size: 12px
+  line-height: 18px
+  text-transform: uppercase
+  margin-right: 41px
+.sort-type a
+  font-size: 12px
+  line-height: 18px
+  text-decoration: none
+  text-transform: uppercase
+  border-bottom: 1px dotted #00ca74
+  color: #b2b2b2
+  &:hover
+    color: #000000
+    border-bottom: 1px solid #00ca74
+  &:focus
+    color: #000000
+    border-bottom: none
+  &:active
+    color: #000000
+    border-bottom: none
+.sort-type a:nth-child(2)
+  margin-right: 45px
+.sort-type a:nth-child(3)
+  margin-right: 47px
+.sort-type a:nth-child(4)
+  margin-right: 103px
+/*sort-direction*/
+.sort-direction-up
+  position: relative
+  left: 98%
+  top: -37%
+  width: 0px
+  height: 0px
+  border-bottom: 11px solid #c1c1c1
+  border-left: 5px solid transparent
+  border-right: 5px solid transparent
+  &:hover
+    border-bottom: 11px solid #b5b5b5
+  &:active
+    border-bottom: 11px solid #000000
+.sort-direction-down
+  position: relative
+  left: 100%
+  top: -62%
+  width: 0px
+  height: 0px
+  border-top: 11px solid #c1c1c1
+  border-left: 5px solid transparent
+  border-right: 5px solid transparent
+  &:hover
+    border-top: 11px solid #b5b5b5
+  &:active
+    border-top: 11px solid #000000
+/*pictures of layouts*/
+.layout-images
+  min-height: 965px
+  margin-bottom: 78px
+.layout-image-1
+  position: relative
+  padding-top: 30px
+  background: url("../img/pictures-header-1.png") no-repeat
+  width: 240px
+  height: 220px
+  margin-bottom: 80px
+  margin-right: 80px
+  &:hover
+    background: url("../img/pictures-header-2.png") no-repeat
+  &:hover > .aviator
+    display: block
+.layout-image-2
+  position: relative
+  padding-top: 30px
+  background: url("../img/pictures-header-1.png") no-repeat
+  width: 240px
+  height: 220px
+  margin-bottom: 80px
+  &:hover
+    background: url("../img/pictures-header-2.png") no-repeat
+  &:hover > .sunset
+    display: block
+.layout-image-3
+  padding-top: 30px
+  background: url("../img/pictures-header-1.png") no-repeat
+  width: 240px
+  height: 220px
+  margin-bottom: 80px
+  margin-right: 80px
+  &:hover
+    background: url("../img/pictures-header-2.png") no-repeat
+  &:hover > .forte
+    display: block
+.layout-image-4
+  padding-top: 30px
+  background: url("../img/pictures-header-1.png") no-repeat
+  width: 240px
+  height: 220px
+  margin-bottom: 80px
+  &:hover
+    background: url("../img/pictures-header-2.png") no-repeat
+  &:hover > .marquee
+    display: block
+.layout-image-5
+  padding-top: 30px
+  background: url("../img/pictures-header-1.png") no-repeat
+  width: 240px
+  height: 220px
+  margin-right: 80px
+  &:hover
+    background: url("../img/pictures-header-2.png") no-repeat
+  &:hover > .avenue
+    display: block
+.layout-image-6
+  padding-top: 30px
+  background: url("../img/pictures-header-1.png") no-repeat
+  width: 240px
+  height: 220px
+  &:hover
+    background: url("../img/pictures-header-2.png") no-repeat
+  &:hover > .dovetail
+    display: block
+.aviator, .sunset, .forte, .marquee, .avenue, .dovetail
+  position: relative
+  top: -250px
+  left: 20px
+  width: 200px
+  height: 200px
+  background: white
+  text-align: center
+  cursor: pointer
+  display: none
+  margin-top: 20px
+h5
+  padding-top: 38px
+  font-size: 18px
+  line-height: 8.56px
+.layout-images p
+  margin-top: -10px
+  font-size: 14px
+  line-height: 18px
+.buy-btn
+  margin-left: auto
+  margin-right: auto
+/*paginator*/
+.paginator
+  background-color: white
+  margin-bottom: 80px
+.paginator a
+  display: inline-block
+  height: 38px
+  min-width: 38px
+  box-sizing: border-box
+  background-color: #f1f1f1
+  text-align: center
+  vertical-align: middle
+  font-size: 12px
+  line-height: 38px
+  color: #000000
+  text-decoration: none
+  margin-right: 4px
+  &:hover
+    background-color: #e5e5e5
+  &:focus
+    background-color: #d5d5d5
+    border-top: 3px solid #b5b5b5
+  &:active
+    background-color: #ffffff
+    border: 2px solid #f2f2f2
+.paginator a:last-child
+  min-width: 140px
+  &:active
+    background-color: #f1f1f1
+
+.modal-content-show
+  display: block
+
 
