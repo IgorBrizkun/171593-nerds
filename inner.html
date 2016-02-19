@@ -7,7 +7,7 @@
 </head>
 <body>
   <header>
-    <div class="container-3">
+    <div class="container-1">
       <!-- Логотип-->
       <div class="logo-1">
         <a href="index.html"><img src="img/logo-1.png" alt="Логотип Nerds"></a>
@@ -15,20 +15,26 @@
       <!--Навигация-->
       <nav>
         <ul class="main-navigation">
-          <li><a class="main-navigation-item" href="#">СТУДИЯ</a>
+          <li><a class="main-navigation-item" href="index.html">СТУДИЯ</a>
           <li><a class="main-navigation-item" href="#">КЛИЕНТЫ</a>
-          <li><a class="main-navigation-item" href="inner.html">МАГАЗИН</a>
+          <li><a class="main-navigation-item main-navigation-item-active" href="inner.html">МАГАЗИН</a>
           <li><a class="main-navigation-item" href="#">КОНТАКТЫ</a>
         </ul>
       </nav>
       <!--Корзина-->
       <a class="cart" href="#">КОРЗИНА</a>
-      <!--Пытаюсь оформить "слайдер"-->
-    <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
-  </div>
-</header>
-<!--Перехожу ко второй части сайта, которая с белым фоном. класс, потому что он также располагается, как и хэдер-->
-<main class="container-4">
+    </div>
+  </header>
+  <main>
+    <div class="grey-container">
+      <!--контейнер для заголовка страницы-->
+      <div class="container-2">
+        <!--центрируем заголовок-->
+        <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
+      </div>
+    </div>
+    <!--центрирую содержимое, контейнер с другим названием, потому что будет родительским флекс-контейнером-->
+<div class="container-4">
   <form class="choose-layout-form" action="form.php" method="GET">
     <h3>Стоимость:</h3>
     <div class="range-filter">
@@ -87,7 +93,10 @@
       <a href="#">по цене</a>
       <a href="#">по типу</a>
       <a href="#">по функционалу</a>
-      <a href="#"><div class="sort-direction-up"></div><div class="sort-direction-down"></div></a>
+      <a href="#">
+        <div class="sort-direction-up"></div>
+        <div class="sort-direction-down sort-direction-down-active"></div>
+      </a>
     </div>
     <div class="layout-images">
       <div class="layout-image-1">
@@ -140,18 +149,14 @@
       </div>
     </div>
     <div class="paginator">
-      <a class="current-page" href="#1">1</a>
-      <a href="#2">2</a>
-      <a href="#3">3</a>
-      <a href="#next">Следующая</a>
-    </div>
-    <div class="aviator">
-        <h5>AVIATOR</h5>
-        <p>Интернет-магазин<br> с личным кабинетом</p>
-        <div class="buy-btn btn red-btn">8000 р.</div>
+      <a class="paginator-active" href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">Следующая</a>
     </div>
   </div>
-</main>
+  </div>
+  </main>
 <!--Здесь указываю социальные сети. Логотипы - это картинки, на которые нажимаешь, чтобы перейти в сеть-->
   <footer>
     <div class="map">
@@ -164,7 +169,6 @@
       </div>
       <div class="modal-content">
         <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-
         <form class="write-us-form" action="#" method="post">
           <div class="your-name"><label for=".name">Ваше имя:</label></div>
           <input class="your-name-input" id=".name" type="text" name="login" placeholder="ПРЕДСТАВЬТЕСЬ, ПОЖАЛУЙСТА">
@@ -172,25 +176,26 @@
           <input class="your-e-mail-input" id=".e-mail" type="text"  name="e-mail" placeholder="ДЛЯ ОТПРАВКИ ОТВЕТА">
           <div class="text-message"><label for=".textarea">Текст письма:</label></div>
           <textarea class="text-message-input" id=".textarea" type="text"  name="message" placeholder="В СВОБОДНОЙ ФОРМЕ"></textarea>
-          <button class="write-us-button red-btn" type="submit">Отправить</button>
+          <button class="contact-us-btn red-btn" type="submit">Отправить</button>
         </form>
       </div>
     </div>
+    <!--карта не центровалась, поэтому контейнер начинаем только здесь-->
     <div class="container-4">
-      <!--Здесь указываю социальные сети. Логотипы - это картинки, на которые нажимаешь, чтобы перейти в сеть-->
-      <ul class="social">
-        <li class="socialitem"><a href="http://www.vk.com"><span class="vk"></span></a></li>
-        <li class="socialitem"><a href="http://www.facebook.com"><span class="facebook"></span></a></li>
-        <li class="socialitem"><a href="http://www.instagram.com"><span class="instagram"></span></a></li>
-      </ul>
+      <!--социальные сети-->
+      <div class="social">
+        <a href="http://www.vk.com"><span class="vk"></span></a>
+        <a href="http://www.facebook.com"><span class="facebook"></span></a>
+        <a href="http://www.instagram.com"><span class="instagram"></span></a>
+      </div>
+      <!--скидки-->
       <div class="discount">
         <h2>Давайте дружить, это выгодно!</h2>
         <p>Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </div>
   </footer>
-
-  <script>
+    <script>
     var link = document.querySelector(".write-us-btn");
     var popup = document.querySelector(".modal-content");
     var close = popup.querySelector(".modal-content-close");
@@ -201,6 +206,6 @@
       event.preventDefault();
       popup.classList.remove("modal-content-show");
     });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
