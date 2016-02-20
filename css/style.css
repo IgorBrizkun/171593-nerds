@@ -268,14 +268,14 @@ main {
 
 .green-btn {
   background-color: #00ca74; }
-  .green-btn:focus {
+  .green-btn:hover, .green-btn:focus {
     background-color: #01a25e; }
   .green-btn:active {
     background-color: #009053; }
 
 .yellow-btn {
   background-color: #efc84a; }
-  .yellow-btn:focus {
+  .yellow-btn:hover, .yellow-btn:focus {
     background-color: #d6ae2c; }
   .yellow-btn:active {
     background-color: #c09b24; }
@@ -579,6 +579,9 @@ footer {
   margin-bottom: 10px; }
 
 .text-message-input {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
   order: 6;
   width: 455px;
   padding-bottom: 93px;
