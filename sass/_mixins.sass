@@ -1,0 +1,26 @@
+=slideChild($mheight, $bg)
+  min-height: $mheight
+  background: $bg
+
+=buttonState($color, $background, $font, $padding)
+  border-radius: $radius
+  color: $color
+  background: $background
+  font-size: $font
+  padding: $padding
+  cursor: pointer
+  transition: background-color $transition
+  &:focus,
+  &:hover
+    background: darken($background,10%)
+  &:active
+    background: darken($background,20%)
+
+=linkState
+  color: $colorBlack
+  transition: color $transition
+  &:focus,
+  &:hover
+    color: lighten($colorRed,10%)
+  &:active
+    color: $colorGrey

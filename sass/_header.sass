@@ -1,0 +1,66 @@
+.header
+  width: 100%
+  background: #eeeeee
+  display: flex
+  flex-flow: column nowrap
+  justify-content: initial
+  align-content: initial
+  align-items: center
+  &Nav
+    display: flex
+    width: 880px
+    margin: 0 auto
+    flex-flow: row nowrap
+    justify-content: center
+    align-content: initial
+    align-items: center
+    flex: 1 0 100%
+    padding-bottom: 60px
+    &Left
+      display: flex
+      flex: 1
+    &Right
+      display: flex
+      flex-flow: row wrap
+      flex: 1 0 560px
+      justify-content: flex-end
+      align-content: initial
+      align-items: center
+    &Cart
+      font-size: 14px
+      padding-left: 70px
+      cursor: pointer
+      color: black
+      position: relative
+      align-self: flex-end
+      &:hover
+        color: #fa6064
+        &::before
+          background: url('../img/cart-2.png') no-repeat
+      &:focus
+        color: #fa6064
+        &::before
+          background: url('../img/cart-3.png') no-repeat
+      &:active
+        color: #a8a8a8
+        &::before
+          background: url('../img/cart-4.png') no-repeat
+      &::before
+        content: ""
+        background: url("../img/cart-1.png") no-repeat
+        display: inline-block
+        width: 14px
+        height: 14px
+        vertical-align: baseline
+        margin-right: 10px
+
+    &Item
+      font-size: 14px
+      margin-left: 42px
+      +linkState
+      &:first-child
+        margin-left: 0
+      &-active
+        border-bottom: 2px solid #fb565a
+        margin-left: 45px
+        +linkState

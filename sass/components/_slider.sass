@@ -1,0 +1,56 @@
+.slider
+  width: 880px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-content: initial
+  align-items: initial
+  &Controls
+    position: absolute
+    bottom: 80px
+    left: 50%
+    width: 200px
+    margin-left: -100px
+    text-align: center
+    > label
+      display: inline-block
+      width: 4px
+      height: 4px
+      margin: 0 3px
+      vertical-align: top
+      background: #ffffff
+      border: 3px solid white
+      border-radius: 50%
+      cursor: pointer
+  &Wrapper
+    width: 100%
+  &Item
+    display: none
+    &Description
+      width: 500px
+      padding-top: 2px
+    &:nth-child(1)
+      +slideChild(310px, url('../img/slider-picture-1.png') no-repeat 100% 11px)
+
+    &:nth-child(2)
+      +slideChild(310px, url('../img/slider-picture-2.png') no-repeat 100% 13px)
+
+    &:nth-child(3)
+      +slideChild(310px, url('../img/slider-picture-3.png') no-repeat 100% -10px)
+  > input[type="radio"]
+    display: none
+  > p
+    margin-top: -10px
+    font-size: 16px
+    line-height: 22px
+    color: #283136
+#btn-1:checked ~ .sliderWrapper .sliderItem:nth-child(1)
+  display: block
+#btn-2:checked ~ .sliderWrapper .sliderItem:nth-child(2)
+  display: block
+#btn-3:checked ~ .sliderWrapper .sliderItem:nth-child(3)
+  display: block
+#btn-1:checked ~ .sliderControls label[for="btn-1"],
+#btn-2:checked ~ .sliderControls label[for="btn-2"],
+#btn-3:checked ~ .sliderControls label[for="btn-3"]
+  background: #c1c1c1
