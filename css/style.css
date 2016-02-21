@@ -327,11 +327,11 @@ a {
           color: #a8a8a8; }
 
 .content {
+  display: -ms-flexbox;
+  -ms-flex-flow: column nowrap;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: initial;
-  align-content: initial;
   align-items: center; }
 
 .content-inner {
@@ -395,7 +395,6 @@ a {
     .shortDescriptionOneHeader > h2 {
       margin-top: 8px; }
     .shortDescriptionOneHeader > p {
-      margin-top: -11px;
       color: #283136;
       font-size: 16px;
       line-height: 22px; }
@@ -418,9 +417,11 @@ a {
           margin-bottom: 25px; }
   .shortDescriptionTwo {
     flex-basis: 240px; }
-    .shortDescriptionTwoLogo > a {
-      flex: 100%;
-      padding-left: 30px; }
+    .shortDescriptionTwoLogo {
+      padding-bottom: 35px; }
+      .shortDescriptionTwoLogo > a {
+        flex: 100%;
+        padding-left: 30px; }
     .shortDescriptionTwoHow {
       color: #283136; }
       .shortDescriptionTwoHow > h4 {
@@ -441,20 +442,21 @@ a {
 
 .main-date {
   position: relative;
-  padding-top: 21px;
-  padding-bottom: 66px;
+  padding-top: 38px;
+  padding-bottom: 45px;
+  margin-bottom: -20px;
   text-align: center; }
   .main-date::before {
     content: "";
     position: absolute;
-    top: 28px;
+    top: 45px;
     left: 0;
     width: 65px;
     border: 1px solid #eeeeee; }
   .main-date::after {
     content: "";
     position: absolute;
-    top: 28px;
+    top: 45px;
     right: 0;
     width: 62px;
     border: 1px solid #eeeeee; }
@@ -525,7 +527,7 @@ a {
       line-height: 20px;
       color: #666666;
       font-weight: 400;
-      padding-left: 22px;
+      padding-left: 20px;
       padding-right: 27px; }
     .mapContactPhone {
       font-size: 16px;
@@ -539,7 +541,6 @@ a {
     .mapContactBtn {
       margin-left: 20px; }
 
-/*pop-up/* */
 .modal-content {
   position: relative;
   top: -84%;
@@ -663,12 +664,12 @@ a {
   border: none;
   border-radius: 5px; }
 
-.pekus {
+.social {
   display: flex;
   width: 880px;
   flex-wrap: wrap; }
 
-.social {
+.icons {
   display: flex;
   flex-basis: 320px;
   list-style: none; }
@@ -713,24 +714,6 @@ a {
     background: url("../img/insta-click.png") no-repeat; }
 
 /*╤Б╨║╨╕╨┤╨║╨╕/* */
-.pekus {
-  display: flex;
-  width: 880px;
-  flex-wrap: wrap; }
-  .pekussocial {
-    display: flex;
-    flex-basis: 320px;
-    list-style: none;
-    order: 1;
-    background: blue; }
-  .pekusdiscount {
-    display: flex;
-    flex-basis: 560px;
-    order: 2;
-    background: red; }
-    .pekusdiscount > h2 {
-      margin: 20px; }
-
 .features-filter {
   border: none;
   display: flex;
@@ -898,7 +881,7 @@ a {
 .sort-direction-up {
   position: relative;
   left: 100%;
-  top: -37%;
+  top: -14px;
   width: 0;
   height: 0;
   border-bottom: 11px solid #c1c1c1;
@@ -912,7 +895,7 @@ a {
 .sort-direction-down {
   position: relative;
   left: 98%;
-  top: -63%;
+  top: -24px;
   width: 0;
   height: 0;
   border-top: 11px solid #c1c1c1;
