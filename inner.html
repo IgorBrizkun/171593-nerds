@@ -6,35 +6,24 @@
   <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <header>
-    <div class="container-1">
-      <!-- Логотип-->
-      <div class="logo-1">
-        <a href="index.html"><img src="img/logo-1.png" alt="Логотип Nerds"></a>
-      </div>
-      <!--Навигация-->
-      <nav>
-        <ul class="main-navigation">
-          <li><a class="main-navigation-item" href="index.html">СТУДИЯ</a>
-          <li><a class="main-navigation-item" href="#">КЛИЕНТЫ</a>
-          <li><a class="main-navigation-item main-navigation-item-active" href="inner.html">МАГАЗИН</a>
-          <li><a class="main-navigation-item" href="#">КОНТАКТЫ</a>
-        </ul>
-      </nav>
-      <!--Корзина-->
-      <a class="cart" href="#">КОРЗИНА</a>
+<header class="header">
+  <nav class="headerNav">
+    <div class="headerNavLeft">
+      <a href="index.html">
+        <img src="img/logo-1.png" height="56" width="139" alt="Логотип Nerds">
+      </a>
     </div>
-  </header>
-  <main>
-    <div class="grey-container">
-      <!--контейнер для заголовка страницы-->
-      <div class="container-2">
-        <!--центрируем заголовок-->
-        <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
-      </div>
+    <div class="headerNavRight">
+      <a class="headerNavItem" href="index.html">СТУДИЯ</a>
+      <a class="headerNavItem" href="#">КЛИЕНТЫ</a>
+      <a class="headerNavItem-active" href="inner.html">МАГАЗИН</a>
+      <a class="headerNavItem" href="#">КОНТАКТЫ</a>
+      <a class="headerNavCart" href="#">КОРЗИНА</a>
     </div>
-    <!--центрирую содержимое, контейнер с другим названием, потому что будет родительским флекс-контейнером-->
-<div class="container-4">
+  </nav>
+  <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
+</header>
+<main class="content-inner">
   <form class="choose-layout-form" action="form.php" method="GET">
     <h3>Стоимость:</h3>
     <div class="range-filter">
@@ -104,7 +93,7 @@
         <div class="aviator">
           <h5>AVIATOR</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <div class="buy-btn btn red-btn">8000 р.</div>
+          <a class="btn-ave">8000 р.</a>
         </div>
       </div>
       <div class="layout-image-2">
@@ -112,7 +101,7 @@
         <div class="sunset">
           <h5>SUNSET</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <div class="buy-btn btn red-btn">8000 р.</div>
+          <a class="btn-ave">8000 р.</a>
         </div>
       </div>
       <div class="layout-image-3">
@@ -120,7 +109,7 @@
         <div class="forte">
           <h5>FORTE</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <div class="buy-btn btn red-btn">8000 р.</div>
+          <a class="btn-ave">8000 р.</a>
         </div>
       </div>
       <div class="layout-image-4">
@@ -128,7 +117,7 @@
         <div class="marquee">
           <h5>MARQUEE</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <div class="buy-btn btn red-btn">8000 р.</div>
+          <a class="btn-ave">8000 р.</a>
         </div>
       </div>
       <div class="layout-image-5">
@@ -136,7 +125,7 @@
         <div class="avenue">
           <h5>AVENUE</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <div class="buy-btn btn red-btn">8000 р.</div>
+          <a class="btn-ave">8000 р.</a>
         </div>
       </div>
       <div class="layout-image-6">
@@ -144,7 +133,7 @@
         <div class="dovetail">
           <h5>DOVETEIL</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <div class="buy-btn btn red-btn">8000 р.</div>
+          <a class="btn-ave">8000 р.</a>
         </div>
       </div>
     </div>
@@ -156,47 +145,54 @@
     </div>
   </div>
   </div>
-  </main>
+</main>
+
 <!--Здесь указываю социальные сети. Логотипы - это картинки, на которые нажимаешь, чтобы перейти в сеть-->
-  <footer>
-    <div class="map">
-      <img class="pointer" src="img/pointer.png" alt="Nerds: указатель">
-      <div class="write-us">
-        <div class="write-us-title">nёrds design studio</div>
-        <div class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
-        <div class="contact-phone">тел. +7 (812) 275-75-75</div>
-        <div class="write-us-btn red-btn">напишите нам</div>
-      </div>
-      <div class="modal-content">
-        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-        <form class="write-us-form" action="#" method="post">
-          <div class="your-name"><label for=".name">Ваше имя:</label></div>
-          <input class="your-name-input" id=".name" type="text" name="login" placeholder="ПРЕДСТАВЬТЕСЬ, ПОЖАЛУЙСТА">
-          <div class="your-e-mail"><label for=".e-mail">Ваш e-mail:</label></div>
-          <input class="your-e-mail-input" id=".e-mail" type="text"  name="e-mail" placeholder="ДЛЯ ОТПРАВКИ ОТВЕТА">
-          <div class="text-message"><label for=".textarea">Текст письма:</label></div>
-          <textarea class="text-message-input" id=".textarea" type="text"  name="message" placeholder="В СВОБОДНОЙ ФОРМЕ"></textarea>
-          <button class="contact-us-btn red-btn" type="submit">Отправить</button>
-        </form>
-      </div>
+<footer class="content">
+  <!--карта-->
+  <div class="map">
+    <!--Указатель карты-->
+    <img class="mapPointer" src="img/pointer.png" alt="Nerds: указатель">
+    <!--контактная информация-->
+    <div class="mapContact">
+      <div class="mapContactTitle">nёrds design studio</div>
+      <div class="mapContactAddress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+      <div class="mapContactPhone">тел. +7 (812) 275-75-75</div>
+      <a class="mapContactBtn btn-md" href="#">напишите нам</a>
     </div>
-    <!--карта не центровалась, поэтому контейнер начинаем только здесь-->
-    <div class="container-4">
-      <!--социальные сети-->
-      <div class="social">
-        <a href="http://www.vk.com"><span class="vk"></span></a>
-        <a href="http://www.facebook.com"><span class="facebook"></span></a>
-        <a href="http://www.instagram.com"><span class="instagram"></span></a>
-      </div>
-      <!--скидки-->
-      <div class="discount">
-        <h2>Давайте дружить, это выгодно!</h2>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+    <!--Всплывающее окно-->
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="write-us-form" action="#" method="post">
+        <div class="your-name"><label for=".name">Ваше имя:</label></div>
+        <input class="your-name-input" id=".name" type="text" name="login" placeholder="ПРЕДСТАВЬТЕСЬ, ПОЖАЛУЙСТА">
+        <div class="your-e-mail"><label for=".e-mail">Ваш e-mail:</label></div>
+        <input class="your-e-mail-input" id=".e-mail" type="text" name="e-mail" placeholder="ДЛЯ ОТПРАВКИ ОТВЕТА">
+        <div class="text-message"><label for=".textarea">Текст письма:</label></div>
+        <textarea class="text-message-input" id=".textarea" type="text" name="message"
+                  placeholder="В СВОБОДНОЙ ФОРМЕ"></textarea>
+        <button class="btn-xl" type="submit">Отправить</button>
+      </form>
     </div>
-  </footer>
+  </div>
+  <!--карта не центровалась, поэтому контейнер начинаем только здесь-->
+
+  <!--социальные сети-->
+  <div class="pekus">
+    <div class="social">
+      <a href="http://www.vk.com"><span class="vk"></span></a>
+      <a href="http://www.facebook.com"><span class="facebook"></span></a>
+      <a href="http://www.instagram.com"><span class="instagram"></span></a>
+    </div>
+    <!--скидки-->
+    <div class="discount">
+      <h2>Давайте дружить, это выгодно!</h2>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
+  </div>
+</footer>
     <script>
-    var link = document.querySelector(".write-us-btn");
+    var link = document.querySelector(".mapContactBtn");
     var popup = document.querySelector(".modal-content");
     var close = popup.querySelector(".modal-content-close");
     link.addEventListener("click", function(event) {event.preventDefault();
