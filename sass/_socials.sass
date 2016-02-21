@@ -1,0 +1,74 @@
+.pekus
+  display: flex
+  width: 880px
+  background: green
+  flex-wrap: wrap
+.social
+  display: flex
+  flex-basis: 320px
+  list-style: none
+
+  background: blue
+
+.discount
+  display: flex
+  flex-basis: 560px
+  flex-wrap: wrap
+  background: red
+  > h2
+    margin: 0
+
+.vk
+  background: url("../img/vk.png") no-repeat
+  width: 63px
+  height: 62px
+  display: flex
+  &:hover,
+  &:focus
+    background: url("../img/vk-hover.png") no-repeat
+  &:active
+    background: url("../img/vk-click.png")no-repeat
+.facebook
+  background: url("../img/face.png")no-repeat
+  width: 63px
+  height: 62px
+  display: flex
+  margin-left: 27px
+  &:hover,
+  &:focus
+    background: url("../img/face-hover.png")no-repeat
+  &:active
+    background: url("../img/face-click.png")no-repeat
+.instagram
+  background: url("../img/insta.png")no-repeat
+  width: 63px
+  height: 62px
+  display: flex
+  margin-left: 27px
+  &:hover,
+  &:focus
+    background: url("../img/insta-hover.png")no-repeat
+  &:active
+    background: url("../img/insta-click.png")no-repeat
+/*скидки/*
+
+.pekus
+  display: flex
+  width: 880px
+  background: green
+  flex-wrap: wrap
+  &social
+    display: flex
+    flex-basis: 320px
+    list-style: none
+    order: 1
+    background: blue
+  &discount
+    display: flex
+    flex-basis: 560px
+    order: 2
+    background: red
+    > h2
+      margin: 20px
+
+

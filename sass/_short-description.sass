@@ -1,0 +1,86 @@
+.shortDescription
+  display: flex
+  width: 880px
+  margin: 0 auto
+  justify-content: space-between
+  align-content: initial
+  align-items: center
+  flex: 1 0 100%
+  flex-flow: row
+  padding-top: 60px
+  padding-bottom: 45px
+  border-bottom: 2px solid $colorGraphite
+  &One
+    flex-basis: 640px
+    &Header
+      > h2
+        margin-top: 8px
+      > p
+        margin-top: -11px
+        color: #283136
+        font-size: 16px
+        line-height: 22px
+    &About
+      color: #283136
+      > h4
+        font-size: 16px
+        line-height: 22px
+        font-weight: 500
+        margin-top: 42px
+        margin-bottom: 22px
+      > ul
+        list-style: none
+        padding-left: 0
+        font-size: 16px
+        line-height: 22px
+        > li
+          background: url("../img/list-style.png")no-repeat left center
+          padding-left: 30px
+          margin-bottom: 25px
+
+  &Two
+    flex-basis: 240px
+    &Logo
+      > a
+        flex: 100%
+        padding-left: 30px
+    &How
+      color: #283136
+      > h4
+        margin-top: -5px
+        font-size: 16px
+        line-height: 22px
+        font-weight: 500
+        margin-bottom: 22px
+      > ul
+        list-style: none
+        padding-left: 0
+        font-size: 16px
+        line-height: 22px
+        > li
+          background: url("../img/list-style.png")no-repeat left center
+          padding-left: 30px
+          margin-bottom: 23px
+.main-date
+  position: relative
+  padding-top: 21px
+  padding-bottom: 66px
+  text-align: center
+  &::before
+    content: ""
+    position: absolute
+    top: 28px
+    left: 0
+    width: 65px
+    border: 1px solid #eeeeee
+  &::after
+    content: ""
+    position: absolute
+    top: 28px
+    right: 0
+    width: 62px
+    border: 1px solid #eeeeee
+
+
+
+
