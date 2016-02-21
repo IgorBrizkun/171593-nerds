@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <script src="js/script.js" type="text/javascript"></script>
 </head>
 <body>
 <header class="header">
@@ -162,23 +163,6 @@
       </div>
     </div>
 </footer>
-
-
-<script>
-  var link = document.querySelector(".mapContactBtn");
-  var popup = document.querySelector(".modal-content");
-  var close = popup.querySelector(".modal-content-close");
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-    popup.classList.add("modal-content-show");
-  });
-  close.addEventListener("click", function (event) {
-    event.preventDefault();
-    popup.classList.remove("modal-content-show");
-  });
-</script>
-
-
-
+<script src="js/script.js"></script>
 </body>
 </html>
