@@ -14,7 +14,6 @@
     justify-content: center
     align-content: initial
     align-items: center
-    flex: 1 0 100%
     padding-top: 5px
     padding-bottom: 34px
     &Left
@@ -24,18 +23,20 @@
     &Right
       display: flex
       flex-flow: row wrap
-      flex: 1 0 560px
       justify-content: flex-end
       align-content: initial
       align-items: center
-      margin-top: 40px
+      padding-top: 40px
+
     &Cart
       font-size: 14px
-      padding-left: 70px
+      margin-left: 70px
       cursor: pointer
       color: black
       position: relative
       align-self: flex-end
+      transition: color $transition
+      border-bottom: 2px solid transparent
       &:hover
         color: #fa6064
         &::before
@@ -60,6 +61,7 @@
     &Item
       font-size: 14px
       margin-left: 42px
+      border-bottom: 2px solid transparent
       +linkState
       &:first-child
         margin-left: 0

@@ -5,10 +5,9 @@
   justify-content: space-between
   align-content: initial
   align-items: center
-  flex: 1 0 100%
   flex-flow: row
   padding-top: 60px
-  padding-bottom: 45px
+  padding-bottom: 48px
   border-bottom: 2px solid $colorGraphite
   &One
     flex-basis: 640px
@@ -16,6 +15,7 @@
       > h2
         margin-top: 8px
       > p
+        margin-top: -10px
         color: #283136
         font-size: 16px
         line-height: 22px
@@ -27,6 +27,7 @@
         font-weight: 500
         margin-top: 42px
         margin-bottom: 22px
+        text-transform: uppercase
       > ul
         list-style: none
         padding-left: 0
@@ -35,24 +36,22 @@
         > li
           background: url("../img/list-style.png")no-repeat left center
           padding-left: 30px
-          margin-bottom: 25px
+          margin-bottom: 23px
 
   &Two
     flex-basis: 240px
     &Logo
-      padding-bottom: 35px
+      margin-bottom: 65px
       > a
         flex: 100%
         padding-left: 30px
-
     &How
       color: #283136
       > h4
-        margin-top: -5px
         font-size: 16px
         line-height: 22px
         font-weight: 500
-        margin-bottom: 22px
+        text-transform: uppercase
       > ul
         list-style: none
         padding-left: 0
@@ -63,22 +62,21 @@
           padding-left: 30px
           margin-bottom: 23px
 .main-date
+  margin-top: 22px
   position: relative
-  padding-top: 38px
-  padding-bottom: 45px
-  margin-bottom: -20px
   text-align: center
+  text-transform: uppercase
   &::before
     content: ""
     position: absolute
-    top: 45px
+    top: 8px
     left: 0
     width: 65px
     border: 1px solid #eeeeee
   &::after
     content: ""
     position: absolute
-    top: 45px
+    top: 8px
     right: 0
     width: 62px
     border: 1px solid #eeeeee
