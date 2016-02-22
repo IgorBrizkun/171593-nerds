@@ -1,7 +1,7 @@
 /**
  * Created by Igor on 21.02.2016.
  */
-var link = document.querySelector(".mapContactBtn");
+var link = document.querySelector(".map-contact-btn");
 var popup = document.querySelector(".modal-content");
 var close = popup.querySelector(".modal-content-close");
 link.addEventListener("click", function (event) {

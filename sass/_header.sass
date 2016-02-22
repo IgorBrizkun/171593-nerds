@@ -6,67 +6,67 @@
   justify-content: initial
   align-content: initial
   align-items: center
-  &Nav
-    display: flex
-    width: 880px
-    margin: 0 auto
-    flex-flow: row nowrap
-    justify-content: center
-    align-content: initial
-    align-items: center
-    padding-top: 5px
-    padding-bottom: 36px
-    &Left
-      display: flex
-      flex: 1
-      padding-top: 22px
-    &Right
-      display: flex
-      flex-flow: row wrap
-      justify-content: flex-end
-      align-content: initial
-      align-items: center
-      padding-top: 40px
+.header-nav
+  display: flex
+  width: 880px
+  margin: 0 auto
+  flex-flow: row nowrap
+  justify-content: center
+  align-content: initial
+  align-items: center
+  padding-top: 5px
+  padding-bottom: 36px
+.header-nav-left
+  display: flex
+  flex: 1
+  padding-top: 22px
+.header-nav-right
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-end
+  align-content: initial
+  align-items: center
+  padding-top: 40px
 
-    &Cart
-      font-size: 14px
-      margin-left: 70px
-      cursor: pointer
-      color: black
-      position: relative
-      align-self: flex-end
-      transition: color $transition
-      border-bottom: 2px solid transparent
-      &:hover
-        color: #fa6064
-        &::before
-          background: url('../img/cart-2.png') no-repeat
-      &:focus
-        color: #fa6064
-        &::before
-          background: url('../img/cart-3.png') no-repeat
-      &:active
-        color: #a8a8a8
-        &::before
-          background: url('../img/cart-4.png') no-repeat
-      &::before
-        content: ""
-        background: url("../img/cart-1.png") no-repeat
-        display: inline-block
-        width: 14px
-        height: 14px
-        vertical-align: baseline
-        margin-right: 10px
+.header-nav-cart
+  font-size: 14px
+  margin-left: 70px
+  cursor: pointer
+  color: black
+  position: relative
+  align-self: flex-end
+  transition: color $transition
+  border-bottom: 2px solid transparent
+  &:hover
+    color: #fa6064
+    &::before
+      background: url('../img/cart-2.png') no-repeat
+  &:focus
+    color: #fa6064
+    &::before
+      background: url('../img/cart-3.png') no-repeat
+  &:active
+    color: #a8a8a8
+    &::before
+      background: url('../img/cart-4.png') no-repeat
+  &::before
+    content: ""
+    background: url("../img/cart-1.png") no-repeat
+    display: inline-block
+    width: 14px
+    height: 14px
+    vertical-align: baseline
+    margin-right: 10px
 
-    &Item
-      font-size: 14px
-      margin-left: 42px
-      border-bottom: 2px solid transparent
-      +linkState
-      &:first-child
-        margin-left: 0
-      &-active
-        border-bottom: 2px solid #fb565a
-        margin-left: 45px
-        +linkState
+.header-nav-item
+  font-size: 14px
+  margin-left: 42px
+  border-bottom: 2px solid transparent
+  +linkState
+  &:first-child
+    margin-left: 0
+  &-active
+    border-bottom: 2px solid #fb565a
+    margin-left: 45px
+    +linkState
 

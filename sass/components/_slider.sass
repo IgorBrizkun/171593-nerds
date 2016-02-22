@@ -3,77 +3,72 @@
   position: relative
   min-height: 310px
   overflow: hidden
-  margin-bottom: 3px
-  &Controls
-    position: absolute
-    bottom: 92px
-    left: 430px
-    width: 200px
-    height: 10px
-    margin-left: -80px
-    text-align: center
-    z-index: 10
-    & label
-      display: inline-block
-      width: 4px
-      height: 4px
-      margin: 0 3px
-      vertical-align: top
-      background: #fff
-      border: 3px solid white
-      border-radius: 50%
-      cursor: pointer
-  &Wrapper
-    width: 100%
-  &Item
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-
-    -webkit-transition: left 1.3s ease
-    -moz-transition: left 1.3s ease
-    transition: left 1.3s ease
-
-    background: no-repeat 100% 10px
-    &Description
-      width: 470px
-      padding-top: 5px
-      > p
-        padding-bottom: 19px
-        margin-top: -10px
-        font-size: 16px
-        line-height: 22px
-        color: #283136
-    &:nth-child(1)
-      +slideChild(310px, url('../img/slider-picture-1.png') no-repeat 100% 14px)
-
-    &:nth-child(2)
-      +slideChild(310px, url('../img/slider-picture-2.png') no-repeat 100% 15px)
-
-    &:nth-child(3)
-      +slideChild(310px, url('../img/slider-picture-3.png') no-repeat 100% -8px)
-  & input[type="radio"]
-    display: none
-
-#btn-1:checked ~ .sliderWrapper .sliderItem:nth-child(1)
+.slider-controls
+  position: absolute
+  bottom: 94px
+  left: 430px
+  width: 200px
+  height: 10px
+  margin-left: -80px
+  text-align: center
+  z-index: 10
+.slider-controls label
+  display: inline-block
+  width: 4px
+  height: 4px
+  margin: 0 3px
+  vertical-align: top
+  background: #fff
+  border: 3px solid white
+  border-radius: 50%
+  cursor: pointer
+.slider-wrapper
+  width: 100%
+.slider-item
+  position: absolute
+  top: 0
   left: 0
-#btn-1:checked ~ .sliderWrapper .sliderItem:nth-child(2),
-#btn-1:checked ~ .sliderWrapper .sliderItem:nth-child(3)
+  width: 100%
+  height: 100%
+  -webkit-transition: left 1.3s ease
+  -moz-transition: left 1.3s ease
+  transition: left 1.3s ease
+  background: no-repeat 100% 10px
+.slider input[type="radio"]
+  display: none
+#btn-1:checked ~ .slider-wrapper .slider-item:nth-child(1)
+  left: 0
+#btn-1:checked ~ .slider-wrapper .slider-item:nth-child(2),
+#btn-1:checked ~ .slider-wrapper .slider-item:nth-child(3)
   left: 900px
-#btn-2:checked ~ .sliderWrapper .sliderItem:nth-child(1)
+#btn-2:checked ~ .slider-wrapper .slider-item:nth-child(1)
   left: -900px
-#btn-2:checked ~ .sliderWrapper .sliderItem:nth-child(2)
+#btn-2:checked ~ .slider-wrapper .slider-item:nth-child(2)
   left: 0
-#btn-2:checked ~ .sliderWrapper .sliderItem:nth-child(3)
+#btn-2:checked ~ .slider-wrapper .slider-item:nth-child(3)
   left: 900px
-#btn-3:checked ~ .sliderWrapper .sliderItem:nth-child(1),
-#btn-3:checked ~ .sliderWrapper .sliderItem:nth-child(2)
+#btn-3:checked ~ .slider-wrapper .slider-item:nth-child(1),
+#btn-3:checked ~ .slider-wrapper .slider-item:nth-child(2)
   left: -900px
-#btn-3:checked ~ .sliderWrapper .sliderItem:nth-child(3)
+#btn-3:checked ~ .slider-wrapper .slider-item:nth-child(3)
   left: 0
-#btn-1:checked ~ .sliderControls label[for="btn-1"],
-#btn-2:checked ~ .sliderControls label[for="btn-2"],
-#btn-3:checked ~ .sliderControls label[for="btn-3"]
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"]
   background: #c1c1c1
+.slider-item-description
+  width: 470px
+.slider-item-description p
+  padding-bottom: 20px
+  margin-top: -10px
+  font-size: 16px
+  line-height: 22px
+  color: #283136
+.slider-item:nth-child(1)
+  +slideChild(310px, url('../img/slider-picture-1.png') no-repeat 100% 11px)
+
+.slider-item:nth-child(2)
+  +slideChild(310px, url('../img/slider-picture-2.png') no-repeat 100% 9px)
+
+.slider-item:nth-child(3)
+  +slideChild(310px, url('../img/slider-picture-3.png') no-repeat 100% -10px)
