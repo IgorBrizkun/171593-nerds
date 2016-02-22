@@ -48,24 +48,12 @@ a {
   text-transform: uppercase;
   text-decoration: none; }
 
-.btn-ave {
-  border-radius: 3px;
-  color: #eeeeee;
-  background: #fb565a;
-  font-size: 12px;
-  padding: 13px 49px;
-  cursor: pointer;
-  transition: background-color 0.3s; }
-  .btn-ave:focus, .btn-ave:hover {
-    background: #fa2429; }
-  .btn-ave:active {
-    background: #e6050b; }
 .btn-sm {
   border-radius: 3px;
   color: #eeeeee;
   background: #fb565a;
   font-size: 12px;
-  padding: 11px 20px;
+  padding: 11px 40px;
   cursor: pointer;
   transition: background-color 0.3s; }
   .btn-sm:focus, .btn-sm:hover {
@@ -113,7 +101,7 @@ a {
   color: #eeeeee;
   background: #00ca74;
   font-size: 12px;
-  padding: 11px 20px;
+  padding: 11px 40px;
   cursor: pointer;
   transition: background-color 0.3s; }
   .btn-green:focus, .btn-green:hover {
@@ -125,7 +113,7 @@ a {
   color: #eeeeee;
   background: #efc84a;
   font-size: 12px;
-  padding: 11px 20px;
+  padding: 11px 40px;
   cursor: pointer;
   transition: background-color 0.3s; }
   .btn-yellow:focus, .btn-yellow:hover {
@@ -169,10 +157,11 @@ a {
   width: 880px;
   position: relative;
   min-height: 310px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 3px; }
   .sliderControls {
     position: absolute;
-    bottom: 94px;
+    bottom: 92px;
     left: 430px;
     width: 200px;
     height: 10px;
@@ -205,20 +194,20 @@ a {
       width: 470px;
       padding-top: 5px; }
       .sliderItemDescription > p {
-        padding-bottom: 15px;
+        padding-bottom: 19px;
         margin-top: -10px;
         font-size: 16px;
         line-height: 22px;
         color: #283136; }
     .sliderItem:nth-child(1) {
       min-height: 310px;
-      background: url("../img/slider-picture-1.png") no-repeat 100% 12px; }
+      background: url("../img/slider-picture-1.png") no-repeat 100% 14px; }
     .sliderItem:nth-child(2) {
       min-height: 310px;
-      background: url("../img/slider-picture-2.png") no-repeat 100% 13px; }
+      background: url("../img/slider-picture-2.png") no-repeat 100% 15px; }
     .sliderItem:nth-child(3) {
       min-height: 310px;
-      background: url("../img/slider-picture-3.png") no-repeat 100% -10px; }
+      background: url("../img/slider-picture-3.png") no-repeat 100% -8px; }
   .slider input[type="radio"] {
     display: none; }
 
@@ -376,7 +365,7 @@ a {
     align-content: initial;
     align-items: center;
     padding-top: 5px;
-    padding-bottom: 34px; }
+    padding-bottom: 36px; }
     .headerNavLeft {
       display: flex;
       flex: 1;

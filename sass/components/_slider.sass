@@ -3,9 +3,10 @@
   position: relative
   min-height: 310px
   overflow: hidden
+  margin-bottom: 3px
   &Controls
     position: absolute
-    bottom: 94px
+    bottom: 92px
     left: 430px
     width: 200px
     height: 10px
@@ -40,19 +41,19 @@
       width: 470px
       padding-top: 5px
       > p
-        padding-bottom: 15px
+        padding-bottom: 19px
         margin-top: -10px
         font-size: 16px
         line-height: 22px
         color: #283136
     &:nth-child(1)
-      +slideChild(310px, url('../img/slider-picture-1.png') no-repeat 100% 12px)
+      +slideChild(310px, url('../img/slider-picture-1.png') no-repeat 100% 14px)
 
     &:nth-child(2)
-      +slideChild(310px, url('../img/slider-picture-2.png') no-repeat 100% 13px)
+      +slideChild(310px, url('../img/slider-picture-2.png') no-repeat 100% 15px)
 
     &:nth-child(3)
-      +slideChild(310px, url('../img/slider-picture-3.png') no-repeat 100% -10px)
+      +slideChild(310px, url('../img/slider-picture-3.png') no-repeat 100% -8px)
   & input[type="radio"]
     display: none
 
