@@ -686,7 +686,7 @@ a {
   padding-right: 90px;
   padding-top: 53px;
   padding-bottom: 49px;
-  margin-top: -200px;
+  margin-top: -300px;
   margin-left: -293px;
   background-color: white;
   color: #000000;
@@ -746,6 +746,7 @@ a {
 
 .your-name-input {
   order: 3;
+  height: 33px;
   padding-left: 17px;
   margin-right: 18px;
   margin-bottom: 21px;
@@ -763,6 +764,7 @@ a {
 
 .your-e-mail-input {
   padding-left: 17px;
+  height: 33px;
   order: 4;
   width: 199px;
   margin-bottom: 21px;
@@ -783,9 +785,9 @@ a {
   font-family: "Roboto", "Arial", sans-serif;
   order: 6;
   width: 455px;
+  height: 110px;
   padding-left: 17px;
-  padding-bottom: 33px;
-  margin-bottom: 49px;
+  margin-bottom: 47px;
   text-transform: uppercase;
   border-radius: 3px;
   border: 2px solid #d7dcde; }
