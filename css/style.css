@@ -1,6 +1,9 @@
 body {
   font-family: "Roboto", "Arial", sans-serif;
-  font-weight: normal; }
+  font-weight: normal;
+  min-width: 900px;
+  margin: 0;
+  padding: 0; }
 
 h1 {
   color: #000000;
@@ -626,20 +629,18 @@ a {
   margin-left: 123px; }
 
 .map {
-  position: relative;
-  background: #cccccc url("../img/map.jpg") no-repeat;
-  width: 1199px;
+  background: url("../img/map-background.jpg") no-repeat;
+  background-position: center;
   height: 416px;
-  margin-bottom: 76px; }
-
-.map-pointer {
-  margin-left: 830px;
-  margin-top: 120px; }
+  margin-bottom: 76px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .map-contact {
-  position: absolute;
-  left: 160px;
-  top: 90px;
+  position: relative;
+  left: 50%;
+  margin-left: -440px;
+  top: 20%;
   width: 250px;
   height: 240px;
   background-color: white; }
@@ -676,15 +677,17 @@ a {
 
 .modal-content {
   position: fixed;
-  left: 30%;
-  top: 20%;
+  left: 50%;
+  top: 50%;
   font-size: 16px;
   line-height: 18px;
-  width: 470px;
+  width: 460px;
   padding-left: 83px;
   padding-right: 90px;
-  padding-top: 56px;
+  padding-top: 53px;
   padding-bottom: 49px;
+  margin-top: -200px;
+  margin-left: -293px;
   background-color: white;
   color: #000000;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
@@ -722,7 +725,7 @@ a {
 
 .write-us-form input {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 31px;
   font-family: "Roboto", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase; }
@@ -743,9 +746,10 @@ a {
 
 .your-name-input {
   order: 3;
-  margin-right: 19px;
+  padding-left: 17px;
+  margin-right: 18px;
   margin-bottom: 21px;
-  width: 215px;
+  width: 199px;
   border-radius: 3px;
   border: 2px solid #d7dcde; }
   .your-name-input:hover {
@@ -758,8 +762,9 @@ a {
   margin-bottom: 10px; }
 
 .your-e-mail-input {
+  padding-left: 17px;
   order: 4;
-  width: 215px;
+  width: 199px;
   margin-bottom: 21px;
   border-radius: 3px;
   border: 2px solid #d7dcde; }
@@ -774,11 +779,12 @@ a {
 
 .text-message-input {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 31px;
   font-family: "Roboto", "Arial", sans-serif;
   order: 6;
   width: 455px;
-  padding-bottom: 93px;
+  padding-left: 17px;
+  padding-bottom: 33px;
   margin-bottom: 49px;
   text-transform: uppercase;
   border-radius: 3px;
@@ -794,8 +800,8 @@ a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 600;
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
@@ -862,6 +868,7 @@ a {
 
 .sort-type {
   display: flex;
+  justify-content: space-between;
   width: 560px;
   margin-bottom: 22px; }
 
@@ -869,8 +876,7 @@ a {
   color: #000000;
   font-size: 12px;
   line-height: 18px;
-  text-transform: uppercase;
-  margin-right: 41px; }
+  text-transform: uppercase; }
 
 .sort-type a {
   font-size: 12px;
@@ -886,17 +892,9 @@ a {
     color: #000000;
     border-bottom: none; }
 
-.sort-type a:nth-child(2) {
-  margin-right: 44px; }
-
-.sort-type a:nth-child(3) {
-  margin-right: 45px; }
-
-.sort-type a:nth-child(4) {
-  margin-right: 96px; }
-
 .sort-type a:nth-child(5) {
-  border-bottom: none; }
+  border-bottom: none;
+  margin-left: 61px; }
 
 .sort-direction-up {
   margin-left: 22px;
