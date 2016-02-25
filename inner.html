@@ -3,28 +3,32 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
   <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header class="header">
-  <nav class="header-nav">
-    <div class="header-nav-left">
-      <a href="index.html">
-        <img src="img/logo-1.png" height="56" width="139" alt="Логотип Nerds">
-      </a>
-    </div>
-    <div class="header-nav-right">
-      <a class="header-nav-item" href="index.html">Студия</a>
-      <a class="header-nav-item" href="#">Клиенты</a>
-      <a class="header-nav-item-active" href="inner.html">Магазин</a>
-      <a class="header-nav-item" href="#">Контакты</a>
-      <a class="header-nav-cart" href="#">Корзина</a>
-    </div>
-  </nav>
-  <h1>Добро пожаловать в магазин готовых макетов</h1>
+  <div class="container">
+    <nav class="main-navigation">
+      <div class="header-nav-left">
+        <a href="index.html">
+          <img src="img/logo-1.png" height="56" width="139" alt="Логотип Nerds">
+        </a>
+      </div>
+      <div class="header-nav-right">
+        <a class="header-nav-item" href="index.html">Студия</a>
+        <a class="header-nav-item" href="#">Клиенты</a>
+        <a class="header-nav-item-active">Магазин</a>
+        <a class="header-nav-item" href="#">Контакты</a>
+        <a class="header-nav-cart" href="#">Корзина</a>
+      </div>
+    </nav>
+    <h1>Добро пожаловать в магазин готовых макетов</h1>
+  </div>
 </header>
-<main class="content-inner">
-  <form class="choose-layout-form" action="form.php" method="GET">
+<main class="inner-container">
+  <form class="choose-layout-form" action="#" method="GET">
     <h3>Стоимость:</h3>
     <div class="range-filter">
       <div class="range-controls">
@@ -85,52 +89,52 @@
       </a>
     </div>
     <div class="layout-images">
-      <div class="layout-image-1">
-        <img src="img/layout-aviator.png" height="240" width="240" alt="Авиатор">
-        <div class="aviator">
+      <div class="layout-image">
+        <img src="img/layout-aviator.jpg" height="240" width="240" alt="Авиатор">
+        <div class="layout-image-item">
           <h5>AVIATOR</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <a class="btn-sm">8000 р.</a>
+          <a class="btn-sm" href="#">8000 р.</a>
         </div>
       </div>
-      <div class="layout-image-2">
-        <img src="img/layout-sunset.png" height="240" width="240" alt="Сансет">
-        <div class="sunset">
+      <div class="layout-image">
+        <img src="img/layout-sunset.jpg" height="240" width="240" alt="Сансет">
+        <div class="layout-image-item">
           <h5>SUNSET</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <a class="btn-sm">8000 р.</a>
+          <a class="btn-sm" href="#">8000 р.</a>
         </div>
       </div>
-      <div class="layout-image-3">
-        <img src="img/layout-forte.png" height="240" width="240" alt="Форте">
-        <div class="forte">
+      <div class="layout-image">
+        <img src="img/layout-forte.jpg" height="240" width="240" alt="Форте">
+        <div class="layout-image-item">
           <h5>FORTE</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <a class="btn-sm">8000 р.</a>
+          <a class="btn-sm" href="#">8000 р.</a>
         </div>
       </div>
-      <div class="layout-image-4">
-        <img src="img/layout-marquee.png" height="240" width="240" alt="Марке">
-        <div class="marquee">
+      <div class="layout-image">
+        <img src="img/layout-marquee.jpg" height="240" width="240" alt="Марке">
+        <div class="layout-image-item">
           <h5>MARQUEE</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <a class="btn-sm">8000 р.</a>
+          <a class="btn-sm" href="#">8000 р.</a>
         </div>
       </div>
-      <div class="layout-image-5" >
-        <img src="img/layout-avenue.png" height="240" width="240" alt="Авеню">
-        <div class="avenue">
+      <div class="layout-image">
+        <img src="img/layout-avenue.jpg" height="240" width="239" alt="Авеню">
+        <div class="layout-image-item">
           <h5>AVENUE</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <a class="btn-sm">8000 р.</a>
+          <a class="btn-sm" href="#">8000 р.</a>
         </div>
       </div>
-      <div class="layout-image-6">
-        <img src="img/layout-dovetail.png" height="240" width="240" alt="Давтейл">
-        <div class="dovetail">
+      <div class="layout-image">
+        <img src="img/layout-dovetail.jpg" height="240" width="239" alt="Давтейл">
+        <div class="layout-image-item">
           <h5>DOVETEIL</h5>
           <p>Интернет-магазин<br> с личным кабинетом</p>
-          <a class="btn-sm">8000 р.</a>
+          <a class="btn-sm" href="#">8000 р.</a>
         </div>
       </div>
     </div>
@@ -142,7 +146,7 @@
     </div>
   </div>
 </main>
-<footer class="content">
+<footer class="container">
   <div class="map">
     <img class="map-pointer" src="img/pointer.png" height="190" width="231" alt="Nerds: указатель">
     <div class="map-contact">
@@ -150,19 +154,6 @@
       <div class="map-contact-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
       <div class="map-contact-phone">тел. +7 (812) 275-75-75</div>
       <a class="map-contact-btn btn-md" href="#">напишите нам</a>
-    </div>
-    <div class="modal-content">
-      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-      <form class="write-us-form" action="#" method="post">
-        <div class="your-name"><label for=".name">Ваше имя:</label></div>
-        <input class="your-name-input" id=".name" type="text" name="login" placeholder="Представьтесь, пожалуйста">
-        <div class="your-e-mail"><label for=".e-mail">Ваш e-mail:</label></div>
-        <input class="your-e-mail-input" id=".e-mail" type="text" name="e-mail" placeholder="Для отправки ответа">
-        <div class="text-message"><label for=".textarea">Текст письма:</label></div>
-        <textarea class="text-message-input" id=".textarea"  name="message"
-                  placeholder="В свободной форме"></textarea>
-        <button class="btn-xl" type="submit">Отправить</button>
-      </form>
     </div>
   </div>
   <div class="social">
@@ -177,6 +168,19 @@
     </div>
   </div>
 </footer>
+<div class="modal-content">
+  <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+  <form class="write-us-form" action="#" method="post">
+    <div class="your-name"><label for="name">Ваше имя:</label></div>
+    <input class="your-name-input" id="name" type="text" name="login" placeholder="Представьтесь, пожалуйста">
+    <div class="your-e-mail"><label for="e-mail">Ваш e-mail:</label></div>
+    <input class="your-e-mail-input" id="e-mail" type="text" name="e-mail" placeholder="Для отправки ответа">
+    <div class="text-message"><label for="textarea">Текст письма:</label></div>
+        <textarea class="text-message-input" id="textarea"  name="message"
+                  placeholder="В свободной форме"></textarea>
+    <button class="btn-xl" type="submit">Отправить</button>
+  </form>
+</div>
 <script src="js/script.js"></script>
 </body>
 </html>

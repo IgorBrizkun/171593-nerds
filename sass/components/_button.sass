@@ -1,18 +1,41 @@
 .btn
   &-sm
-    +buttonState($colorGraphite, $colorRed, 12px, 11px 40px)
+    +buttonState($ColorWhite, $colorRed, 12px, 11px 40px)
+    line-height: 18px
   &-md
-    +buttonState($colorGraphite, $colorRed, 12px, 12px 52px)
+    +buttonState($ColorWhite, $colorRed, 12px, 12px 52px)
   &-lg
-    +buttonState($colorGraphite, $colorRed, 12px, 11px 70px)
+    +buttonState($ColorWhite, $colorRed, 12px, 11px 70px)
   &-xl
-    +buttonState($colorGraphite, $colorRed, 12px, 11px 180px)
+    +buttonState($ColorWhite, $colorRed, 12px, 11px 180px)
   &-green
-    +buttonState($colorGraphite, $colorGreen, 12px, 11px 40px)
+    color: $ColorWhite
+    transition: background-color $transition
+    background-color: #00ca74
+    cursor: pointer
+    padding:  11px 42px
+    font-size: 12px
+    border-radius: 3px
+    line-height: 18px
+    &:hover,
+    &:focus
+      background-color: #01a25e
+    &:active
+      background-color: #009053
   &-yellow
-    +buttonState($colorGraphite, $colorYellow, 12px, 11px 40px)
-  &-graphite
-    +buttonState($colorGraphite, $colorYellow, 12px, 12px 20px)
+    color: $ColorWhite
+    transition: background-color $transition
+    background-color: #efc84a
+    cursor: pointer
+    padding:  11px 42px
+    font-size: 12px
+    border-radius: 3px
+    line-height: 18px
+    &:hover,
+    &:focus
+      background-color: #d6ae2c
+    &:active
+      background-color: #c09b24
 .sort-btn input[type="submit"]
   font-family: 'Roboto', 'Arial', sans-serif
   font-size: 12px

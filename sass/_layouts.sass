@@ -1,70 +1,19 @@
 .layout-images
-  min-height: 965px
-  margin-bottom: 78px
-.layout-image-1
+  margin-bottom: -1px
+.layout-image
   position: relative
   padding-top: 30px
   background: url("../img/pictures-header-1.png") no-repeat
   width: 240px
   height: 220px
-  margin-bottom: 80px
+  margin-bottom: 100px
+  &:hover
+    background: url("../img/pictures-header-2.png") no-repeat
+  &:hover > .layout-image-item
+    display: block
+.layout-image:nth-child(odd)
   margin-right: 80px
-  &:hover
-    background: url("../img/pictures-header-2.png") no-repeat
-  &:hover > .aviator
-    display: block
-.layout-image-2
-  position: relative
-  padding-top: 30px
-  background: url("../img/pictures-header-1.png") no-repeat
-  width: 240px
-  height: 220px
-  margin-bottom: 80px
-  &:hover
-    background: url("../img/pictures-header-2.png") no-repeat
-  &:hover > .sunset
-    display: block
-.layout-image-3
-  padding-top: 30px
-  background: url("../img/pictures-header-1.png") no-repeat
-  width: 240px
-  height: 220px
-  margin-bottom: 80px
-  margin-right: 80px
-  &:hover
-    background: url("../img/pictures-header-2.png") no-repeat
-  &:hover > .forte
-    display: block
-.layout-image-4
-  padding-top: 30px
-  background: url("../img/pictures-header-1.png") no-repeat
-  width: 240px
-  height: 220px
-  margin-bottom: 80px
-  &:hover
-    background: url("../img/pictures-header-2.png") no-repeat
-  &:hover > .marquee
-    display: block
-.layout-image-5
-  padding-top: 30px
-  background: url("../img/pictures-header-1.png") no-repeat
-  width: 240px
-  height: 220px
-  margin-right: 80px
-  &:hover
-    background: url("../img/pictures-header-2.png") no-repeat
-  &:hover > .avenue
-    display: block
-.layout-image-6
-  padding-top: 30px
-  background: url("../img/pictures-header-1.png") no-repeat
-  width: 240px
-  height: 220px
-  &:hover
-    background: url("../img/pictures-header-2.png") no-repeat
-  &:hover > .dovetail
-    display: block
-.aviator, .sunset, .forte, .marquee, .avenue, .dovetail
+.layout-image-item
   position: relative
   top: -250px
   left: 20px
@@ -76,10 +25,12 @@
   display: none
   margin-top: 20px
 h5
+  color: $colorBlack
   padding-top: 38px
   font-size: 18px
-  line-height: 8.56px
+  line-height: 9px
 .layout-images p
+  margin-bottom: 30px
   margin-top: -10px
   font-size: 14px
   line-height: 18px

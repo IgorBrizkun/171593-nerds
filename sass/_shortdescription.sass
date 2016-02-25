@@ -2,23 +2,19 @@
   display: flex
   width: 880px
   margin: 0 auto
-  justify-content: space-between
-  align-content: initial
-  align-items: center
   flex-flow: row
   padding-top: 60px
-  padding-bottom: 48px
+  padding-bottom: 50px
   border-bottom: 2px solid $colorGraphite
 .short-description-one
   flex-basis: 640px
 .short-description-one-header > h2
-  margin-top: 8px
+  margin-top: 11px
 .short-description-one-header > p
-  margin-top: -10px
+  margin-top: -11px
   color: #283136
   font-size: 16px
   line-height: 22px
-
 .short-description-one-about
   color: #283136
 .short-description-one-about > h4
@@ -33,17 +29,18 @@
   padding-left: 0
   font-size: 16px
   line-height: 22px
-.short-description-one-about > ul > li
+.short-description-one-about p
   background: url("../img/list-style.png")no-repeat left center
-  padding-left: 30px
-  margin-bottom: 23px
-
+  padding-left: 36px
+  margin-bottom: 21px
+  &:last-child
+    padding-top: 1px
 
 .short-description-two
   flex-basis: 240px
 .short-description-two-logo
   margin-bottom: 65px
-.short-description-two-logo > a
+.short-description-two-logo > img
   flex: 100%
   padding-left: 30px
 .short-description-two-how
@@ -58,13 +55,17 @@
   padding-left: 0
   font-size: 16px
   line-height: 22px
-.short-description-two-how > ul > li
+.short-description-two-how  p
   background: url("../img/list-style.png")no-repeat left center
-  padding-left: 30px
-  margin-bottom: 23px
-
+  padding-left: 37px
+  margin-bottom: 21px
+  &:last-child
+    padding-top: 1px
 .main-date
-  margin-top: 22px
+  color: $colorBlack
+  margin-top: 25px
+  margin-left: 3px
+  line-height: 19px
   position: relative
   text-align: center
   text-transform: uppercase
