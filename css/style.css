@@ -118,6 +118,7 @@ a {
 
 .sort-btn input[type="submit"] {
   font-family: "Roboto", "Arial", sans-serif;
+  color: #000000;
   font-size: 12px;
   font-weight: 600;
   line-height: 18px;
@@ -293,10 +294,12 @@ a {
   left: 145px; }
 
 .price-controls label {
+  color: #000000;
   margin-top: -2px;
   line-height: 22px;
   font-size: 16px;
   display: inline-block;
+  vertical-align: top;
   width: 50%;
   text-transform: uppercase; }
 
@@ -575,6 +578,7 @@ a {
 
 .main-date {
   color: #000000;
+  font-size: 16px;
   margin-top: 25px;
   margin-left: 3px;
   line-height: 19px;
@@ -623,7 +627,7 @@ a {
 
 .map {
   position: relative;
-  background: url("../img/map.jpg") no-repeat;
+  background: #cccccc url("../img/map.jpg") no-repeat;
   width: 1199px;
   height: 416px;
   margin-bottom: 76px; }
@@ -641,6 +645,7 @@ a {
   background-color: white; }
 
 .map-contact-title {
+  color: #000000;
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
@@ -657,9 +662,9 @@ a {
   padding-right: 27px; }
 
 .map-contact-phone {
+  color: #666666;
   font-size: 16px;
   line-height: 20px;
-  color: #666666;
   font-weight: 400;
   padding-left: 22px;
   padding-right: 27px;
@@ -818,8 +823,7 @@ a {
   flex-basis: 560px;
   flex-wrap: wrap; }
   .discount > h2 {
-    margin: 0;
-    margin-top: -3px; }
+    margin: -3px 0 0; }
   .discount > p {
     margin-top: 9px;
     color: #283136;
@@ -862,6 +866,7 @@ a {
   margin-bottom: 22px; }
 
 .sort-type-title {
+  color: #000000;
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
